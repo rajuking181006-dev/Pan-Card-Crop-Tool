@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAN Photo & Signature Adjust Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-blur blur1"></div>
+  <div class="bg-blur blur2"></div>
+  <div class="bg-blur blur3"></div>
+
+  <div class="container">
+    <header class="topbar">
+      <h1>PAN Photo & Signature Adjust Tool</h1>
+      <p>
+        Phone se khinchi hui photo aur signature ko portal ke hisaab se automatically ready karke download karein.
+      </p>
+    </header>
+
+    <section class="feature-strip">
+      <div class="feature-pill">Auto JPG Convert</div>
+      <div class="feature-pill">Auto Resize</div>
+      <div class="feature-pill">PAN Upload Ready</div>
+      <div class="feature-pill">Easy Preview</div>
+    </section>
+
+    <main class="tool-grid">
+      <!-- PHOTO CARD -->
+      <section class="editor-card">
+        <div class="card-head">
+          <h2>Photo</h2>
+          <span class="badge">Auto Adjust</span>
+        </div>
+
+        <div class="controls">
+          <label class="field-label">Upload Photo</label>
+          <label class="file-label">
+            <span>Choose File</span>
+            <input type="file" id="photoInput" accept="image/*" />
+          </label>
+
+          <div class="fixed-fields">
+            <div class="field">
+              <label>Required Width in Pixels</label>
+              <input type="text" value="213" readonly />
+            </div>
+
+            <div class="field">
+              <label>Required Height in Pixels</label>
+              <input type="text" value="213" readonly />
+            </div>
+
+            <div class="field">
+              <label>Required DPI Value</label>
+              <input type="text" value="300" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class="canvas-wrap">
+          <canvas id="photoCanvas" width="213" height="213"></canvas>
+        </div>
+
+        <div class="result-box">
+          <h3>Result Properties</h3>
+          <div class="result-grid">
+            <div class="result-item">
+              <span>Width (px)</span>
+              <strong>213</strong>
+            </div>
+            <div class="result-item">
+              <span>Height (px)</span>
+              <strong>213</strong>
+            </div>
+            <div class="result-item">
+              <span>Resolution (dpi)</span>
+              <strong>300</strong>
+            </div>
+            <div class="result-item">
+              <span>Format</span>
+              <strong>JPG</strong>
+            </div>
+          </div>
+        </div>
+
+        <button id="downloadPhotoBtn" class="primary-btn">Get Photo</button>
+        <p class="hint" id="photoStatus">Preview yahan dikhega.</p>
+      </section>
+
+      <!-- SIGNATURE CARD -->
+      <section class="editor-card">
+        <div class="card-head">
+          <h2>Signature</h2>
+          <span class="badge">Auto Adjust</span>
+        </div>
+
+        <div class="controls">
+          <label class="field-label">Upload Signature</label>
+          <label class="file-label">
+            <span>Choose File</span>
+            <input type="file" id="signInput" accept="image/*" />
+          </label>
+
+          <div class="fixed-fields">
+            <div class="field">
+              <label>Required Width in Pixels</label>
+              <input type="text" value="400" readonly />
+            </div>
+
+            <div class="field">
+              <label>Required Height in Pixels</label>
+              <input type="text" value="200" readonly />
+            </div>
+
+            <div class="field">
+              <label>Required DPI Value</label>
+              <input type="text" value="600" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class="canvas-wrap signature-wrap">
+          <canvas id="signCanvas" width="400" height="200"></canvas>
+        </div>
+
+        <div class="result-box">
+          <h3>Result Properties</h3>
+          <div class="result-grid">
+            <div class="result-item">
+              <span>Width (px)</span>
+              <strong>400</strong>
+            </div>
+            <div class="result-item">
+              <span>Height (px)</span>
+              <strong>200</strong>
+            </div>
+            <div class="result-item">
+              <span>Resolution (dpi)</span>
+              <strong>600</strong>
+            </div>
+            <div class="result-item">
+              <span>Format</span>
+              <strong>JPG</strong>
+            </div>
+          </div>
+        </div>
+
+        <button id="downloadSignBtn" class="primary-btn">Get Signature</button>
+        <p class="hint" id="signStatus">Signature preview yahan dikhega.</p>
+      </section>
+    </main>
+
+    <section class="info-section">
+      <div class="info-card">
+        <h3>Simple Process</h3>
+        <p>
+          User ko manually crop, resize ya compress karne ki zarurat nahi hogi. Bas file select karni hai aur final image ready milegi.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>PAN Upload Ready</h3>
+        <p>
+          System background me required properties ke hisaab se file ko prepare karega taaki upload ke time problem kam ho.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Fast & Clean Preview</h3>
+        <p>
+          Preview section se user ko turant samajh aa jayega ki kaunsi file select hui hai aur result kis type ka hoga.
+        </p>
+      </div>
+    </section>
+
+    <section class="bottom-note">
+      <h3>Important Note</h3>
+      <p>
+        Yeh tool PAN card ke liye photo aur signature ko upload-friendly format me ready karne ke liye design kiya gaya hai.
+        User experience ko simple aur clean rakha gaya hai.
+      </p>
+    </section>
+  </div>
+  <footer class="custom-footer">
+  <p>
+    Structure Style Logic made with Raju<br />
+    Follow us on
+    <a href="https://instagram.com/raju_shakya_3644" target="_blank" rel="noopener noreferrer">
+      Instagram
+    </a>
+  </p>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
